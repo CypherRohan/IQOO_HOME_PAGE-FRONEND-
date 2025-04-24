@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+          
+            <div class="min-h-full">
+              <nav class="bg-gray-300" style="background-color: rgb(223, 158, 61);">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                  <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="shrink-0">
+                        <img class="size-16" src="iqoo.ico" alt="Your Company">
+                      </div>
+                      <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800
+                          hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Product</a>
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800 hover:bg-gray-700 hover:text-white">E-Store</a>
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Community</a>
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Support</a>
+                          <a href="#" class="rounded-full px-3 py-2 text-lg font-medium text-gray-800 hover:bg-gray-700 hover:text-white">About IQOO</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hidden md:block">
+                      <div class="ml-4 flex items-center md:ml-6">
+                        <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
+                          <span class="absolute -inset-1.5"></span>
+                          <span class="sr-only">View notifications</span>
+                          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                          </svg>
+                        </button>
+
+                        <!-- Profile dropdown -->
+                        <div class="relative ml-3">
+                          <div>
+                            <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                              <span class="absolute -inset-1.5"></span>
+                              <span class="sr-only">Open user menu</span>
+                              <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            </button>
+                          </div>
+
+                          <!--
+                            Dropdown menu, show/hide based on menu state.
+
+                            Entering: "transition ease-out duration-100"
+                              From: "transform opacity-0 scale-95"
+                              To: "transform opacity-100 scale-100"
+                            Leaving: "transition ease-in duration-75"
+                              From: "transform opacity-100 scale-100"
+                              To: "transform opacity-0 scale-95"
+                          -->
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                      <!-- Mobile menu button -->
+                      <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Menu open: "hidden", Menu closed: "block" -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Menu open: "block", Menu closed: "hidden" -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </nav>
+
+              
+                <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                  <h1 class="text-6xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+                  <img id="panel" src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1741692391383/zip/img/iqooneo10r-kv-img1-lg-x2.jpg" alt="phone" style="z-index: -1; width: 100%;">
+                </div>
+              
+              <main>
+                <div class="mx-auto max-w-7xl px-3 lg:px-8">
+                  <h1 class="text-6xl font-bold tracking-tight text-gray-900"><h1 class="text-6xl tracking-tight text-white">DISCOVER</h1></h1>
+                </div>
+              </main>
+            </div>
+
+  </header>
+
+
+          <!-- <div style="border-radius: 20px; background-color: aqua; padding-left: 25%;">
+            <img src="https://images.pexels.com/photos/6278754/pexels-photo-6278754.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div>
+        <div style="border-radius: 20px; background-color: rgb(0, 183, 250); padding-left: 25%;">
+            <img src="https://images.pexels.com/photos/6373146/pexels-photo-6373146.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div>
+        <div style="border-radius: 20px; background-color: rgb(253, 206, 77); padding-left: 25%;">
+          <img src="https://images.pexels.com/photos/1294875/pexels-photo-1294875.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div>
+        <div style="border-radius: 20px; background-color: rgb(86, 253, 158); padding-left: 25%;">
+          <img src="https://images.pexels.com/photos/5554745/pexels-photo-5554745.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div> -->
+
+    <main>
+      
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.gadgets360cdn.com/large/iqoo_12_weibo_1698650750564.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.gadgets360cdn.com/large/iqoo_12_funtouch_os_14_iqoo_1700735088567.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.fonearena.com/blog/wp-content/uploads/2023/10/iQOO-12-series-1024x576.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative isolate overflow-hidden bg-gray-900" style="margin-top: 100px; padding-top: 10px;">
+        <!-- Background Image -->
+        <img src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1744347115783/zip/img/iqooz10-kv-img1-lg-x2.jpg"
+             alt=""
+             class="absolute inset-0 -z-10 size-full object-cover object-center opacity-20" />
+      
+        <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+          <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+            <div class="sm:max-w-lg">
+              <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Modern Aesthetics
+
+                Trendy Colors, Lit Design
+                
+                
+                </h1>
+              <p class="mt-4 text-xl text-gray-300">Ultramarine and Titanium are bold yet modern colors, enhanced by a premium matte texture for a stylish and trendy look.
+                
+              </p>
+            </div>
+            <div>
+              <div class="mt-10">
+                <!-- Decorative image grid -->
+                <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                  <div class="absolute transform sm:top-0 sm:left-1/2 sm:translate-x-8 lg:top-1/2 lg:left-1/2 lg:translate-x-8 lg:-translate-y-1/2">
+                    <div class="flex items-center space-x-6 lg:space-x-8">
+                      <!-- Columns of images -->
+                      <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                          <img src="https://www.91-img.com/gallery_images_uploads/c/4/c4ec3cc0d95a39cda3a1c7fd7f3225ba90306677.jpg?tr=h-630,c-at_max,q-80" alt="" class="size-full object-cover">
+                        </div>
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://www.91-img.com/gallery_images_uploads/6/5/6518bcae26d1bae3866e6c990c8de7e8ef4c5683.jpg?tr=h-630,c-at_max,q-80" alt="" class="size-full object-cover">
+                        </div>
+                      </div>
+                      <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/product/1744347115783/zip/img/iqooz10-kv-img1-lg-x2.jpg" alt="" class="size-full object-cover">
+                        </div>
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://images.unsplash.com/photo-1611926653670-e18689373857?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="size-full object-cover">
+                        </div>
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://exstatic-in.vivo.com/Oz84QB3Wo0uns8j1/in/1688127249166/fcba3549107b13120aed4d9c6f11e0f7.png.webp" alt="" class="size-full object-cover">
+                        </div>
+                      </div>
+                      <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://analyticsindiamag.com/wp-content/uploads/2020/12/Qualcomm_AIM.jpg" alt="" class="size-full object-cover">
+                        </div>
+                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src="https://media.istockphoto.com/id/1139005826/vector/glass-smartphone-hanging-over-table-mock-up-or-template-cellphone.jpg?s=612x612&w=0&k=20&c=007lJW0BRBwE01BEFECbaGMQ5mNET4mGP69lfwGfjq8=" alt="" class="size-full object-cover">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <a href="#" class="inline-block rounded-md border border-transparent px-8 py-3 text-center font-medium text-white hover:bg-gray-800">EXPLORE</a>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+          
+
+
+        
+          <div>
+                  <div class="bg-gray-5006py-24 sm:py-32">
+                    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+                      <h2 class="text-center text-4xl font-semibold" style="color: rgb(225, 161, 0);">IQOO</h2>
+                      <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl">Everything you need to know about IQOO</p>
+                      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+                        <div class="relative lg:row-span-2">
+                          <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+                          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Mobile friendly</p>
+                              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
+                            </div>
+                            <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                              <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                                <img class="size-full object-cover object-top" src="https://www.91-img.com/gallery_images_uploads/c/3/c3466d0ccb0873833158b2a488a3bb28877cdf2c.jpg?tr=h-630,c-at_max,q-80" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
+                        </div>
+                        <div class="relative max-lg:row-start-1">
+                          <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+                          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.</p>
+                            </div>
+                            <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                              <img id="panel" class="w-full max-lg:max-w-xs" src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/1725516767426/8e9c7f8f4db534cb908c4145027122b1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+                        </div>
+                        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+                          <div class="absolute inset-px rounded-lg bg-white"></div>
+                          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.</p>
+                            </div>
+                            <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                              <img class="h-[min(152px,40cqw)] object-cover" src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-security.png" alt="">
+                            </div>
+                          </div>
+                          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5"></div>
+                        </div>
+                        <div class="relative lg:row-span-2">
+                          <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+                          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Powerful APIs</p>
+                              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.</p>
+                            </div>
+                            <div class="relative min-h-[30rem] w-full grow">
+                              <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                                <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                                  <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                                    <div class="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">FUNTOUCH OS 15</div>
+                                    <div class="border-r border-gray-600/10 px-4 py-2">IQOO</div>
+                                  </div>
+                                </div>
+                                <div class="px-6 pt-6 pb-14" style="color: azure;">
+                                  <img id="ph" src="https://fdn2.gsmarena.com/vv/pics/vivo/vivo-iqoo12-10.jpg" alt="">
+                                  <img id="ph" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT0xBdE91Dfgn8jeCztLQ7L3lCYxFbkapvgwefmcSEtUj7LNjXf86Fv64BV5MiqxdF8mNsQQoZLP8MNewQMcGZoOHPZ6ClPwg" alt="">
+                                  <img id="ph" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ53jees9heYITnvxEH_IRueU2BwXSmekT70RYaELo7Fxq76JoiXegfO-8xvIfMfLLndIS-tnAvsnsT1CESdssBOW38ZQ2oLg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+          </div>
+    </main>
+    <footer>
+      <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <!-- Background Image -->
+        <img src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/funtouch/1727673067170/zip/img/pc/Memory.png.webp" 
+             alt="" 
+             class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-20" />
+      
+        <!-- Leadership content section -->
+        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Meet our leadership</h2>
+            <p class="mt-6 text-lg/8 text-gray-300">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+          </div>
+          <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            <li>
+              <div class="flex items-center gap-x-6">
+                <img class="size-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?..." alt="">
+                <div>
+                  <h3 class="text-base/7 font-semibold tracking-tight text-white">Leslie Alexander</h3>
+                  <p class="text-sm/6 font-semibold text-indigo-400">Co-Founder / CEO</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center gap-x-6">
+                <img class="size-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?..." alt="">
+                <div>
+                  <h3 class="text-base/7 font-semibold tracking-tight text-white">Leslie Alexander</h3>
+                  <p class="text-sm/6 font-semibold text-indigo-400">Co-Founder / CEO</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center gap-x-6">
+                <img class="size-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?..." alt="">
+                <div>
+                  <h3 class="text-base/7 font-semibold tracking-tight text-white">Leslie Alexander</h3>
+                  <p class="text-sm/6 font-semibold text-indigo-400">Co-Founder / CEO</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center gap-x-6">
+                <img class="size-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?..." alt="">
+                <div>
+                  <h3 class="text-base/7 font-semibold tracking-tight text-white">Leslie Alexander</h3>
+                  <p class="text-sm/6 font-semibold text-indigo-400">Co-Founder / CEO</p>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Repeat for other members -->
+          </ul>
+        </div>
+      </div>
+      
+    </footer>
+
+    
+    
+</body>
+</html>
